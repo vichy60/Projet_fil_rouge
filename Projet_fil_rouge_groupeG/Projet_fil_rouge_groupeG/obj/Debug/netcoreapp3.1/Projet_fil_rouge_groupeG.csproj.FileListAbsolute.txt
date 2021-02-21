@@ -1,0 +1,13 @@
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.exe
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.deps.json
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.runtimeconfig.json
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.runtimeconfig.dev.json
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.dll
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.pdb
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.csprojAssemblyReference.cache
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.AssemblyInfoInputs.cache
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.AssemblyInfo.cs
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.csproj.CoreCompileInputs.cache
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.dll
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.pdb
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG\obj\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.genruntimeconfig.cache
