@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Projet_fil_rouge_groupeG\Projet_fil_rouge_groupeG.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

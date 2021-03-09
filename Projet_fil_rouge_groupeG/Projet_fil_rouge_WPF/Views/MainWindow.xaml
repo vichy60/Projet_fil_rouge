@@ -1,0 +1,34 @@
+﻿<Window x:Class="Projet_fil_rouge_WPF.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_fil_rouge_WPF.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Gestion">
+                    <MenuItem Header="Gestion des Patients"/>
+                    <MenuItem Header="Gestion des Médecins"/>
+                    <MenuItem Header="Gestion des Rendez-vous"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Consultation">
+                    <MenuItem Header="Afficher tout"/>
+                    <MenuItem Header="Rechercher les RDV par date"/>
+                    <MenuItem Header="Afficher les RDV d'un patient"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Quitter"/>
+
+
+
+
+
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
