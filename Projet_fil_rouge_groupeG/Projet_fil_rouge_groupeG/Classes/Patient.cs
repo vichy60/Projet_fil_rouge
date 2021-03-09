@@ -16,13 +16,17 @@ namespace Projet_fil_rouge_groupeG.Classes
         private static SqlCommand command;
         private static SqlDataReader reader;
 
-        public Patient(int codePatient, string nomPatient, string adressePatient, DateTime dateNaissance, string sexePatient) : base(codePatient, nomPatient)
+        public Patient()
         {
-            CodePatient = codePatient;
-            NomPatient = nomPatient;
-            AdressePatient = adressePatient;
-            DateNaissance = dateNaissance;
-            SexePatient = sexePatient;
+
+        }
+        public Patient(int CodePatient, string NomPatient, string AdressePatient, DateTime DateNaissance, string SexePatient)
+        {
+            this.CodePatient = CodePatient;
+            this.NomPatient = NomPatient;
+            this.AdressePatient = AdressePatient;
+            this.DateNaissance = DateNaissance;
+            this.SexePatient = SexePatient;
         }
         public int CodePatient { get => codePatient; set => codePatient = value; }
         public string NomPatient { get => nomPatient; set => nomPatient = value; }
@@ -78,105 +82,97 @@ namespace Projet_fil_rouge_groupeG.Classes
             return nbRow == 1;
         }
 
-        public static Contact GetContactById(int id)
+        public static Patient GetPatientById(int id)
         {
-            Contact contact = null;
+            Patient patient = null;
             //Une méthode pour récupérer un contact avec son id
-            string request = "SELECT id, nom, prenom, telephone from contact where id = @id";
+            string request = "SELECT id, nomPatient, adressePatient, dateNaissance, sexePatient from Patient where id = @id";
             command = new SqlCommand(request, DataBase.Connection);
             command.Parameters.Add(new SqlParameter("@id", id));
             DataBase.Connection.Open();
             reader = command.ExecuteReader();
             if (reader.Read())
             {
-                contact = new Contact
+                patient = new Patient()
                 {
-                    Id = reader.GetInt32(0),
-                    Nom = reader.GetString(1),
-                    Prenom = reader.GetString(2),
-                    Telephone = reader.GetString(3)
+                    CodePatient = reader.GetInt32(0),
+                    NomPatient = reader.GetString(1),
+                    AdressePatient = reader.GetString(2),
+                    DateNaissance = reader.GetDateTime(3),
+                    SexePatient = reader.GetString(4),
                 };
             }
             reader.Close();
             command.Dispose();
             DataBase.Connection.Close();
-            return contact;
+            return patient;
         }
 
-        public static List<Contact> GetContacts()
+        public static List<Patient> GetPatients()
         {
-            //Pour une récupération totale avec les mails, 
-            //on modifie la requete en ajoutant la jointure avec la table mail
-            List<Contact> contacts = new List<Contact>();
+            
+            List<Patient> patients = new List<Patient>();
             string request = "SELECT " +
-                "c.id as contactId, c.nom, c.prenom, c.telephone, m.id as mailId, m.mail" +
-                " from contact c left join Mail m on c.id = m.contactId";
+                "id,nomPatient,adressePatient,dateNaissance, sexePatient" +
+                " from Patient";
             command = new SqlCommand(request, DataBase.Connection);
             DataBase.Connection.Open();
             reader = command.ExecuteReader();
-            Contact contact = null;
+           Patient patient = null;
             while (reader.Read())
             {
-                if (contact == null || contact.Id != reader.GetInt32(0))
+                if (patient == null || patient.CodePatient != reader.GetInt32(0))
                 {
-                    contact = new Contact
+                    patient = new Patient
                     {
-                        Id = reader.GetInt32(0),
-                        Nom = reader.GetString(1),
-                        Prenom = reader.GetString(2),
-                        Telephone = reader.GetString(3)
+                        CodePatient = reader.GetInt32(0),
+                        NomPatient = reader.GetString(1),
+                        AdressePatient = reader.GetString(2),
+                        DateNaissance = reader.GetDateTime(3),
+                        SexePatient = reader.GetString(4),
                     };
-                    contacts.Add(contact);
+                    patients.Add(patient);
                 }
-                if (reader.GetValue(4).GetType() != typeof(DBNull))
-                {
-                    Email e = new Email
-                    {
-                        Id = reader.GetInt32(4),
-                        Mail = reader.GetString(5)
-                    };
-                    contact.Mails.Add(e);
-                }
-            }
+            }  
             reader.Close();
             command.Dispose();
             DataBase.Connection.Close();
-            return contacts;
+            return patients;
         }
 
-        public static List<Contact> SearchContacts(string search)
-        {
+        //public static List<Contact> SearchContacts(string search)
+        //{
 
-            List<Contact> contacts = new List<Contact>();
-            string request = "SELECT id, nom, prenom, telephone from contact where " +
-                "nom like @search OR prenom like @search OR telephone like @search";
-            command = new SqlCommand(request, DataBase.Connection);
-            command.Parameters.Add(new SqlParameter("@search", $"{search}%"));
-            DataBase.Connection.Open();
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Contact contact = new Contact
-                {
-                    Id = reader.GetInt32(0),
-                    Nom = reader.GetString(1),
-                    Prenom = reader.GetString(2),
-                    Telephone = reader.GetString(3)
-                };
-                contacts.Add(contact);
-            }
-            reader.Close();
-            command.Dispose();
+        //    List<Contact> contacts = new List<Contact>();
+        //    string request = "SELECT id, nom, prenom, telephone from contact where " +
+        //        "nom like @search OR prenom like @search OR telephone like @search";
+        //    command = new SqlCommand(request, DataBase.Connection);
+        //    command.Parameters.Add(new SqlParameter("@search", $"{search}%"));
+        //    DataBase.Connection.Open();
+        //    reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        Contact contact = new Contact
+        //        {
+        //            Id = reader.GetInt32(0),
+        //            Nom = reader.GetString(1),
+        //            Prenom = reader.GetString(2),
+        //            Telephone = reader.GetString(3)
+        //        };
+        //        contacts.Add(contact);
+        //    }
+        //    reader.Close();
+        //    command.Dispose();
 
-            //Requete 2
-            request = "deuxième requete";
-            command = new SqlCommand(request, DataBase.Connection);
-            //executer la commande
+        //    //Requete 2
+        //    request = "deuxième requete";
+        //    command = new SqlCommand(request, DataBase.Connection);
+        //    //executer la commande
 
 
-            DataBase.Connection.Close();
-            return contacts;
-        }
+        //    DataBase.Connection.Close();
+        //    return contacts;
+        //}
 
 
 
