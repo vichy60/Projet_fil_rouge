@@ -38,15 +38,15 @@ namespace Projet_fil_rouge_groupeG.Classes
         public bool Save()
         {
             string request = "INSERT INTO Patient (nomPatient, adressePatient, dateNaissance, sexePatient) VALUES (@nom, @adresse, @date,@sexe)"; 
-            command = new SqlCommand(request, DataBase.Connection);
+            command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@nom", NomPatient));
             command.Parameters.Add(new SqlParameter("@adresse", AdressePatient));
             command.Parameters.Add(new SqlParameter("@date", dateNaissance));
             command.Parameters.Add(new SqlParameter("@sexe", sexePatient));
-            DataBase.Connection.Open();
+            DataBase.connection.Open();
             CodePatient = (int)command.ExecuteScalar();
             command.Dispose();
-            DataBase.Connection.Close();
+            DataBase.connection.Close();
             return CodePatient > 0;
         }
 
@@ -54,12 +54,12 @@ namespace Projet_fil_rouge_groupeG.Classes
         {
             //Instruction de suppression dans la base de données
             string request = "DELETE FROM Patient where id=@id";
-            command = new SqlCommand(request, DataBase.Connection);
+            command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@id", CodePatient));
-            DataBase.Connection.Open();
+            DataBase.connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
-            DataBase.Connection.Close();
+            DataBase.connection.Close();
             return nbRow == 1;
         }
 
@@ -69,16 +69,16 @@ namespace Projet_fil_rouge_groupeG.Classes
         {
             //Instruction Mise à jour dans la base de données après modification
             string request = "update Patient set nomPatient = @nom, adressePatient=@adresse, dateNaissance=@date sexePatient=@sexe where id=@id";
-            command = new SqlCommand(request, DataBase.Connection);
+            command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@nom", NomPatient));
             command.Parameters.Add(new SqlParameter("@prenom", AdressePatient));
             command.Parameters.Add(new SqlParameter("@telephone", DateNaissance));
             command.Parameters.Add(new SqlParameter("@sexe", SexePatient));
             command.Parameters.Add(new SqlParameter("@id", CodePatient));
-            DataBase.Connection.Open();
+            DataBase.connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
-            DataBase.Connection.Close();
+            DataBase.connection.Close();
             return nbRow == 1;
         }
 
@@ -87,9 +87,9 @@ namespace Projet_fil_rouge_groupeG.Classes
             Patient patient = null;
             //Une méthode pour récupérer un contact avec son id
             string request = "SELECT id, nomPatient, adressePatient, dateNaissance, sexePatient from Patient where id = @id";
-            command = new SqlCommand(request, DataBase.Connection);
+            command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@id", id));
-            DataBase.Connection.Open();
+            DataBase.connection.Open();
             reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -104,7 +104,7 @@ namespace Projet_fil_rouge_groupeG.Classes
             }
             reader.Close();
             command.Dispose();
-            DataBase.Connection.Close();
+            DataBase.connection.Close();
             return patient;
         }
 
@@ -115,8 +115,8 @@ namespace Projet_fil_rouge_groupeG.Classes
             string request = "SELECT " +
                 "id,nomPatient,adressePatient,dateNaissance, sexePatient" +
                 " from Patient";
-            command = new SqlCommand(request, DataBase.Connection);
-            DataBase.Connection.Open();
+            command = new SqlCommand(request, DataBase.connection);
+            DataBase.connection.Open();
             reader = command.ExecuteReader();
            Patient patient = null;
             while (reader.Read())
@@ -136,7 +136,7 @@ namespace Projet_fil_rouge_groupeG.Classes
             }  
             reader.Close();
             command.Dispose();
-            DataBase.Connection.Close();
+            DataBase.connection.Close();
             return patients;
         }
 

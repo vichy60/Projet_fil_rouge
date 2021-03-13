@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projet_fil_rouge_WPF.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,6 +21,7 @@ namespace Projet_fil_rouge_WPF.Views
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

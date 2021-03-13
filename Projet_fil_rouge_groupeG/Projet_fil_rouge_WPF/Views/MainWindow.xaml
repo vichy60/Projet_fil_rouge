@@ -5,30 +5,197 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_fil_rouge_WPF.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1200" Width="800">
     <Grid>
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Gestion">
-                    <MenuItem Header="Gestion des Patients"/>
-                    <MenuItem Header="Gestion des Médecins"/>
-                    <MenuItem Header="Gestion des Rendez-vous"/>
-                </MenuItem>
-                <Separator />
-                <MenuItem Header="Consultation">
-                    <MenuItem Header="Afficher tout"/>
-                    <MenuItem Header="Rechercher les RDV par date"/>
-                    <MenuItem Header="Afficher les RDV d'un patient"/>
-                </MenuItem>
-                <Separator />
-                <MenuItem Header="Quitter"/>
+        <StackPanel>
+            <StackPanel>
+                <!--<DockPanel>-->
+                <!--<Menu DockPanel.Dock="Top">-->
+                <Menu>
+                    <MenuItem Header="Gestion">
+                        <MenuItem Header="Gestion des Patients"/>
+                        <MenuItem Header="Gestion des Médecins"/>
+                        <MenuItem Header="Gestion des Rendez-vous"/>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Consultation">
+                        <MenuItem Header="Afficher tout"/>
+                        <MenuItem Header="Rechercher les RDV par date"/>
+                        <MenuItem Header="Afficher les RDV d'un patient"/>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Quitter"/>
+
+                </Menu>
+                <StackPanel></StackPanel>
+                <!--</DockPanel>-->
+            </StackPanel>
+
+            <StackPanel  Visibility="Visible">
+                <GroupBox Header="Gestion des Patients" Margin="30" Padding="10,10,10,10" BorderBrush="Blue" >
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
+                                <Label Content="CODE" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20" >
+                                <Label Content="NOM" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20">
+                                <Label Content="ADRESSE" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300" Height="70"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="DATE DE NAISSANCE" MinWidth="200" Margin="20,0,0,0"/>
+                                <DatePicker/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <Label Content="SEXE" MinWidth="200" Margin="20,0,0,0"/>
+                                <RadioButton VerticalAlignment="Center" Content="M"/>
+                                <RadioButton VerticalAlignment="Center" Content="F" Margin="100,0,0,0"/>
+                            </StackPanel>
+
+
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+                            <Button Content="Nouveau" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Rechercher" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Rechercher" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Ajouter" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Modifier" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Supprimer"  Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Quitter" Width="150"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+
+
+            <StackPanel  Visibility="Visible">
+                <GroupBox Header="Gestion des Medecins" Margin="30" Padding="10,10,10,10" BorderBrush="Blue" >
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
+                                <Label Content="CODE" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20" >
+                                <Label Content="NOM" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20">
+                                <Label Content="ADRESSE" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox MinWidth="300" Height="70"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="DATE D'EMBAUCHE" MinWidth="200" Margin="20,0,0,0"/>
+                                <DatePicker/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <Label Content="SPECIALITE" MinWidth="200" Margin="20,0,0,0"/>
+                                <ComboBox Width="200" ItemsSource="{Binding }"/>
+                            </StackPanel>
+
+
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+                            <Button Content="Nouveau" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Rechercher" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Rechercher" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Ajouter" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Modifier" Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Supprimer"  Width="150" Margin="0,0,0,20"/>
+                            <Button Content="Quitter" Width="150"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Visibility="Visible">
+                <GroupBox Header="Gestion des Rendez-vous" Margin="30" Padding="10,10,10,10" BorderBrush="Blue" >
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
+                                <Label Content="CODE PATIENT" MinWidth="150" Margin="20,0,0,0"/>
+                                <ComboBox MinWidth="150"/>
+                                <Label Content="CODE MEDECIN" MinWidth="150" Margin="20,0,0,0"/>
+                                <ComboBox MinWidth="150"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20" >
+                                <Label Content="NOM PATIENT" MinWidth="150" Margin="20,0,0,0"/>
+                                <TextBlock MinWidth="150"/>
+                                <Label Content="NOM MEDECIN" MinWidth="150" Margin="20,0,0,0"/>
+                                <TextBlock MinWidth="150"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="0,0,0,20">
+                                <Label Content="SEXE" MinWidth="150" Margin="20,0,0,0"/>
+                                <RadioButton  VerticalAlignment="Center" Content="M"/>
+                                <RadioButton VerticalAlignment="Center" Content="F" Margin="30,0,0,0"/>
+                                <Label Content="SPECIALITE MEDECIN" MinWidth="150" Margin="80,0,0,0"/>
+                                <TextBlock MinWidth="150"/>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                
+                                <GroupBox>
+                                    <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="DATE RDV" MinWidth="150"/>
+                                        <DatePicker/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
+                                        <Label Content="HEURE RDV" MinWidth="150"/>
+                                        <TextBox MinWidth="30"/>
+                                        <Label Content="h" MinWidth="5"/>
+                                        <TextBox MinWidth="30"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                </GroupBox>
+                                <StackPanel Orientation="Vertical" Margin="90,0,0,0">
+                                    <StackPanel>
+                                        <Button Content="AJOUTER RDV" MinWidth="255" MinHeight="30" Margin="0,0,0,15"/> 
+                                    </StackPanel>
+                                   
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="NOUVEAU" MinWidth="120" MinHeight="30"/>
+                                        <Button Content="QUITTER" MinWidth="120" MinHeight="30" Margin="15,0,0,0"/>
+                                    </StackPanel>
+                                   
+                                </StackPanel>
+                                
+                            </StackPanel>
 
 
 
 
 
-            </Menu>
-            <StackPanel></StackPanel>
-        </DockPanel>
+                        </StackPanel>
+
+
+
+                    </StackPanel>
+                </GroupBox>
+
+            </StackPanel>
+
+
+
+
+
+        </StackPanel>
+
+
+
+
     </Grid>
 </Window>

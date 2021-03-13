@@ -8,17 +8,20 @@
         Title="Afficher Tout" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <GroupBox Header="CHOIX">
-                <StackPanel Orientation="Horizontal" >
-                    <RadioButton Content="TOUS LES MEDECINS"/>
-                    <RadioButton Content="TOUS LES PATIENTS" />
-                    <RadioButton Content="TOUS LES RDV" />
+            <GroupBox Header="CHOIX" Margin="30,30,30,30">
+                <StackPanel Orientation="Horizontal"  Margin="60,0,0,0">
+                    <RadioButton Content="TOUS LES MEDECINS" Width="200"/>
+                    <RadioButton Content="TOUS LES PATIENTS" Width="200"/>
+                    <RadioButton Content="TOUS LES RDV" Width="200"/>
                 </StackPanel>
             </GroupBox>
             <StackPanel>
-                <DataGrid>
-                    
+                
+                <DataGrid x:Name="DataGrid1" ItemsSource="{Binding }"  Height="180"  HorizontalAlignment="Left" VerticalAlignment="Bottom" AutoGenerateColumns="true" ColumnWidth="*">
+
+
                 </DataGrid>
+
             </StackPanel>
 
         </StackPanel>
