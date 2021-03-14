@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projet_fil_rouge_groupeG.Classes
 {
-    class RDV
+    public class RDV
     {
         private int numeroRDV;
         private DateTime dateRDV;
@@ -12,6 +12,13 @@ namespace Projet_fil_rouge_groupeG.Classes
         private string codeMedecin;
         private string codePatient;
 
+
+
+
+        public RDV()
+        {
+
+        }
         public RDV(int numeroRDV, DateTime dateRDV, string heureRDV, string codeMedecin, string codePatient)
         {
             this.NumeroRDV = numeroRDV;

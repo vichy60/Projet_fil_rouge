@@ -17,7 +17,7 @@
             </GroupBox>
             <StackPanel>
                 
-                <DataGrid x:Name="DataGrid1" ItemsSource="{Binding }"  Height="180"  HorizontalAlignment="Left" VerticalAlignment="Bottom" AutoGenerateColumns="true" ColumnWidth="*">
+                <DataGrid x:Name="DataGrid1" ItemsSource="{Binding Patients}"  Height="180"  HorizontalAlignment="Left" VerticalAlignment="Bottom" AutoGenerateColumns="true" ColumnWidth="*">
 
 
                 </DataGrid>

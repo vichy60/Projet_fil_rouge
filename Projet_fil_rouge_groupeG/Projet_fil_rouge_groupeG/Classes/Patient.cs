@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Projet_fil_rouge_groupeG.Classes
 {
-    class Patient
+    public class Patient
     {
         private int codePatient;
         private string nomPatient;
@@ -37,7 +37,7 @@ namespace Projet_fil_rouge_groupeG.Classes
 
         public bool Save()
         {
-            string request = "INSERT INTO Patient (nomPatient, adressePatient, dateNaissance, sexePatient) VALUES (@nom, @adresse, @date,@sexe)"; 
+            string request = "INSERT INTO Patient (nomPatient, adressePatient, dateNaissance, sexePatient) OUTPUT INSERTED.ID VALUES (@nom, @adresse, @date,@sexe)"; 
             command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@nom", NomPatient));
             command.Parameters.Add(new SqlParameter("@adresse", AdressePatient));

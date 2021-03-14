@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Projet_fil_rouge_groupeG.Classes
 {
-    class Specialite
+    public class Specialite
     {
         private int id;
         private string specialiteMedecin;
@@ -43,10 +43,20 @@ namespace Projet_fil_rouge_groupeG.Classes
             DataBase.connection.Close();
             return specialites;
         }
+
+
+
+        public override string ToString()
+
+        {
+            return SpecialiteMedecin;
+        }
+
+
     }
 
 }
 
 
 
-}
+

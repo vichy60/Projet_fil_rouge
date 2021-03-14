@@ -5,6 +5,10 @@ C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.runtimeconfig.dev.json
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.pdb
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.Extras.dll
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.Platform.dll
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.dll
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\System.Windows.Interactivity.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
@@ -14,9 +18,13 @@ C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\bin\Debug\netcoreapp3.1\Projet_fil_rouge_groupeG.pdb
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.csprojAssemblyReference.cache
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\AfficherToutWindow.g.cs
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\MainWindow.g.cs
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF_MarkupCompile.cache
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF_MarkupCompile.lref
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\AfficherToutWindow.baml
+C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\MainWindow.baml
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.g.resources
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.AssemblyInfoInputs.cache
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.AssemblyInfo.cs
@@ -25,7 +33,3 @@ C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.dll
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.pdb
 C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Projet_fil_rouge_WPF.genruntimeconfig.cache
-C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\MainWindow.g.cs
-C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\MainWindow.baml
-C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\AfficherToutWindow.g.cs
-C:\Users\yannick\Desktop\documents m2i\Projet_fil_rouge\Projet_fil_rouge_groupeG\Projet_fil_rouge_WPF\obj\Debug\netcoreapp3.1\Views\AfficherToutWindow.baml
