@@ -41,8 +41,8 @@ namespace Projet_fil_rouge_groupeG.Classes
             command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@nom", NomPatient));
             command.Parameters.Add(new SqlParameter("@adresse", AdressePatient));
-            command.Parameters.Add(new SqlParameter("@date", dateNaissance));
-            command.Parameters.Add(new SqlParameter("@sexe", sexePatient));
+            command.Parameters.Add(new SqlParameter("@date", DateNaissance));
+            command.Parameters.Add(new SqlParameter("@sexe", SexePatient));
             DataBase.connection.Open();
             CodePatient = (int)command.ExecuteScalar();
             command.Dispose();
@@ -68,11 +68,11 @@ namespace Projet_fil_rouge_groupeG.Classes
         public bool Update()
         {
             //Instruction Mise à jour dans la base de données après modification
-            string request = "update Patient set nomPatient = @nom, adressePatient=@adresse, dateNaissance=@date sexePatient=@sexe where id=@id";
+            string request = "update Patient set nomPatient = @nom, adressePatient=@adresse, dateNaissance=@date, sexePatient=@sexe where id=@id";
             command = new SqlCommand(request, DataBase.connection);
             command.Parameters.Add(new SqlParameter("@nom", NomPatient));
-            command.Parameters.Add(new SqlParameter("@prenom", AdressePatient));
-            command.Parameters.Add(new SqlParameter("@telephone", DateNaissance));
+            command.Parameters.Add(new SqlParameter("@adresse", AdressePatient));
+            command.Parameters.Add(new SqlParameter("@date", DateNaissance));
             command.Parameters.Add(new SqlParameter("@sexe", SexePatient));
             command.Parameters.Add(new SqlParameter("@id", CodePatient));
             DataBase.connection.Open();

@@ -5,25 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_fil_rouge_WPF.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1200" Width="800">
-    <Grid>
+        Title="MainWindow" Height="1200" Width="810">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid >
         <StackPanel>
             <StackPanel>
 
-                <Menu>
-                    <MenuItem Header="Gestion">
+                <Menu FontSize="20px">
+                    <MenuItem  Header="Gestion">
                         <MenuItem Header="Gestion des Patients" Command="{Binding MenuPatientCommand}"/>
                         <MenuItem Header="Gestion des Médecins" Command="{Binding MenuMedecinCommand}"/>
                         <MenuItem Header="Gestion des Rendez-vous" Command="{Binding MenuRDVCommand}"/>
                     </MenuItem>
                     <Separator />
                     <MenuItem Header="Consultation">
-                        <MenuItem Header="Afficher tout"/>
-                        <MenuItem Header="Rechercher les RDV par date"/>
+                        <MenuItem Header="Afficher tout" Command="{Binding MenuToutCommand}"/>
+                        <MenuItem Header="Rechercher les RDV par date" Command="{Binding MenuSearchRDVCommand}"/>
                         <MenuItem Header="Afficher les RDV d'un patient"/>
                     </MenuItem>
                     <Separator />
-                    <MenuItem Header="Quitter"/>
+                    <MenuItem Header="Quitter" Command="{Binding MenuQuitterCommand}"/>
 
                 </Menu>
                 <StackPanel></StackPanel>
@@ -61,12 +64,12 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Margin="50,0,0,0">
-                            <Button Content="Nouveau" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Nouveau" Command="{Binding NouveauPatientCommand }" Width="130" Margin="0,0,0,20"/>
                             <Button Content="Rechercher" Command ="{Binding RecherchePatientCommand}"  Width="130" Margin="0,0,0,20"/>
                             <Button Content="Ajouter" Command="{Binding AjoutPatientCommand }" Width="130" Margin="0,0,0,20"/>
-                            <Button Content="Modifier" Width="130" Margin="0,0,0,20"/>
-                            <Button Content="Supprimer"  Width="130" Margin="0,0,0,20"/>
-                            <Button Content="Quitter" Width="130"/>
+                            <Button Content="Modifier" Command="{Binding ModifierPatientCommand }" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Supprimer" Command="{Binding SupprimerPatientCommand }"  Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Quitter" Command="{Binding QuitterPatientCommand }" Width="130"/>
                         </StackPanel>
 
                     </StackPanel>
@@ -82,15 +85,15 @@
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
                                 <Label Content="CODE" MinWidth="200" Margin="20,0,0,0"/>
-                                <TextBox MinWidth="300"/>
+                                <TextBox Text="{Binding CodeMedecin}" MinWidth="300"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Margin="0,0,0,20" >
                                 <Label Content="NOM" MinWidth="200" Margin="20,0,0,0"/>
-                                <TextBox MinWidth="300"/>
+                                <TextBox Text="{Binding NomMedecin}" MinWidth="300"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Margin="0,0,0,20">
-                                <Label Content="ADRESSE" MinWidth="200" Margin="20,0,0,0"/>
-                                <TextBox MinWidth="300" Height="70"/>
+                                <Label Content="TEL" MinWidth="200" Margin="20,0,0,0"/>
+                                <TextBox  Text="{Binding TelMedecin}" MinWidth="300" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="DATE D'EMBAUCHE" MinWidth="200" Margin="20,0,0,0"/>
@@ -98,7 +101,7 @@
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                                 <Label Content="SPECIALITE" MinWidth="200" Margin="20,0,0,0"/>
-                                <ComboBox ItemsSource="{Binding Specialites}" Width="200" />
+                                <ComboBox ItemsSource="{Binding Specialites}" SelectedItem="{Binding Spe}"  Width="200" />
                             </StackPanel>
 
 
@@ -106,12 +109,12 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Margin="50,0,0,0">
-                            <Button Content="Nouveau" Width="150" Margin="0,0,0,20"/>
-                            <Button Content="Rechercher" Width="150" Margin="0,0,0,20"/>
-                            <Button Content="Ajouter" Width="150" Margin="0,0,0,20"/>
-                            <Button Content="Modifier" Width="150" Margin="0,0,0,20"/>
-                            <Button Content="Supprimer"  Width="150" Margin="0,0,0,20"/>
-                            <Button Content="Quitter" Width="150"/>
+                            <Button Content="Nouveau" Command="{Binding NouveauMedecinCommand }" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Rechercher" Command ="{Binding RechercherMedecinCommand}" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Ajouter" Command ="{Binding AjouterMedecinCommand}" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Modifier" Command ="{Binding ModifierMedecinCommand}" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Supprimer" Command ="{Binding SupprimerMedecinCommand}" Width="130" Margin="0,0,0,20"/>
+                            <Button Content="Quitter" Command ="{Binding QuitterMedecinCommand}" Width="130"/>
                         </StackPanel>
 
                     </StackPanel>
