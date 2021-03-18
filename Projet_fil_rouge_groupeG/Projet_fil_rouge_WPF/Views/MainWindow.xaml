@@ -128,22 +128,22 @@
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
                                 <Label Content="CODE PATIENT" MinWidth="150" Margin="20,0,0,0"/>
-                                <ComboBox MinWidth="150"/>
+                                <ComboBox ItemsSource="{Binding Patients}" SelectedItem="{Binding Patient}" MinWidth="150"/>
                                 <Label Content="CODE MEDECIN" MinWidth="150" Margin="20,0,0,0"/>
-                                <ComboBox MinWidth="150"/>
+                                <ComboBox ItemsSource="{Binding Medecins}" SelectedItem="{Binding Medecin}" MinWidth="150"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Margin="0,0,0,20" >
                                 <Label Content="NOM PATIENT" MinWidth="150" Margin="20,0,0,0"/>
-                                <TextBlock MinWidth="150"/>
+                                <TextBlock Text ="{Binding NomPatient}" MinWidth="150"/>
                                 <Label Content="NOM MEDECIN" MinWidth="150" Margin="20,0,0,0"/>
-                                <TextBlock MinWidth="150"/>
+                                <TextBlock Text="{Binding NomMedecin}" MinWidth="150"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Margin="0,0,0,20">
                                 <Label Content="SEXE" MinWidth="150" Margin="20,0,0,0"/>
-                                <RadioButton  VerticalAlignment="Center" Content="M"/>
-                                <RadioButton VerticalAlignment="Center" Content="F" Margin="30,0,0,0"/>
+                                <RadioButton IsChecked="{Binding M}" VerticalAlignment="Center" Content="M"/>
+                                <RadioButton IsChecked="{Binding F}" VerticalAlignment="Center" Content="F" Margin="30,0,0,0"/>
                                 <Label Content="SPECIALITE MEDECIN" MinWidth="150" Margin="80,0,0,0"/>
-                                <TextBlock MinWidth="150"/>
+                                <TextBlock Text="{Binding SpeRdv}" MinWidth="150"/>
 
                             </StackPanel>
 
@@ -153,24 +153,23 @@
                                     <StackPanel Orientation="Vertical">
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="DATE RDV" MinWidth="150"/>
-                                            <DatePicker/>
+                                            <DatePicker SelectedDate="{Binding DateRDV}"/>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
                                             <Label Content="HEURE RDV" MinWidth="150"/>
-                                            <TextBox MinWidth="30"/>
-                                            <Label Content="h" MinWidth="5"/>
-                                            <TextBox MinWidth="30"/>
+                                            <TextBox Text="{Binding HeureRDV}"  MinWidth="70"/>
+                                           
                                         </StackPanel>
                                     </StackPanel>
                                 </GroupBox>
                                 <StackPanel Orientation="Vertical" Margin="90,0,0,0">
                                     <StackPanel>
-                                        <Button Content="AJOUTER RDV" MinWidth="255" MinHeight="30" Margin="0,0,0,15"/>
+                                        <Button Content="AJOUTER RDV" Command="{Binding AjouterRDVCommand}" MinWidth="255" MinHeight="30" Margin="0,0,0,15"/>
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Content="NOUVEAU" MinWidth="120" MinHeight="30"/>
-                                        <Button Content="QUITTER" MinWidth="120" MinHeight="30" Margin="15,0,0,0"/>
+                                        <Button Content="NOUVEAU" Command="{Binding NouveauRDVCommand}" MinWidth="120" MinHeight="30"/>
+                                        <Button Content="QUITTER" Command="{Binding QuitterRDVCommand}" MinWidth="120" MinHeight="30" Margin="15,0,0,0"/>
                                     </StackPanel>
 
                                 </StackPanel>

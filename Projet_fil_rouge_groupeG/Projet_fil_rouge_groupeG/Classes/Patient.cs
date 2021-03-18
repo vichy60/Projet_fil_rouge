@@ -180,7 +180,8 @@ namespace Projet_fil_rouge_groupeG.Classes
 
         public override string ToString()
         {
-            return $"codePatient : {CodePatient}; nomPatient : {NomPatient}; adressePatient : {adressePatient}; dateNaissance : {dateNaissance}; sexePatient: {sexePatient}";
+            return $"{CodePatient}";
+            // return $"codePatient : {CodePatient}; nomPatient : {NomPatient}; adressePatient : {adressePatient}; dateNaissance : {dateNaissance}; sexePatient: {sexePatient}";
         }
     }
 }

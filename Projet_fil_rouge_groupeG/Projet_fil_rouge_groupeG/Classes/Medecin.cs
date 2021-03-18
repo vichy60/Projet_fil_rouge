@@ -68,22 +68,22 @@ namespace Projet_fil_rouge_groupeG.Classes
 
 
 
-        //public bool Update()
-        //{
-        //    //Instruction Mise à jour dans la base de données après modification
-        //    string request = "update Patient set nomPatient = @nom, adressePatient=@adresse, dateNaissance=@date, sexePatient=@sexe where id=@id";
-        //    command = new SqlCommand(request, DataBase.connection);
-        //    command.Parameters.Add(new SqlParameter("@nom", NomPatient));
-        //    command.Parameters.Add(new SqlParameter("@adresse", AdressePatient));
-        //    command.Parameters.Add(new SqlParameter("@date", DateNaissance));
-        //    command.Parameters.Add(new SqlParameter("@sexe", SexePatient));
-        //    command.Parameters.Add(new SqlParameter("@id", CodePatient));
-        //    DataBase.connection.Open();
-        //    int nbRow = command.ExecuteNonQuery();
-        //    command.Dispose();
-        //    DataBase.connection.Close();
-        //    return nbRow == 1;
-        //}
+        public bool Update()
+        {
+            //Instruction Mise à jour dans la base de données après modification
+            string request = "update Medecin set nomMedecin = @nom, telMedecin=@tel, dateEmbauche=@date, specialiteMedecinId=@spe where id=@id";
+            command = new SqlCommand(request, DataBase.connection);
+            command.Parameters.Add(new SqlParameter("@nom", NomMedecin));
+            command.Parameters.Add(new SqlParameter("@tel", TelMedecin));
+            command.Parameters.Add(new SqlParameter("@date", DateEmbauche));
+            command.Parameters.Add(new SqlParameter("@spe", SpecialiteMedecinId));
+            command.Parameters.Add(new SqlParameter("@id", CodeMedecin));
+            DataBase.connection.Open();
+            int nbRow = command.ExecuteNonQuery();
+            command.Dispose();
+            DataBase.connection.Close();
+            return nbRow == 1;
+        }
 
         public static Medecin GetMedecinById(int id)
         {
@@ -146,7 +146,7 @@ namespace Projet_fil_rouge_groupeG.Classes
 
         public override string ToString()
         {
-            return $"codeMedecin : {CodeMedecin}; nomMedecin : {NomMedecin}; telMedecin : {telMedecin}; dateEmbauche : {dateEmbauche}; spécialité: {specialiteMedecinId}";
+            return  $"{CodeMedecin}";
         }
 
 

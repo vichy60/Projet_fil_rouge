@@ -28,17 +28,15 @@ Drop Table Specialite
 	PRIMARY KEY CLUSTERED ([id] ASC)
  )
 
- CREATE TABLE dbo.RDV
- (
-	[id] INT IDENTITY (1,1) NOT NULL,
-	----[numeroRDV] INT NOT NULL,
-	[dateRDV] DATETIME NOT NULL,
-	[heureRDV] VARCHAR(50) NOT NULL,
-	[codeMedecin] int NOT NULL,
-	[codePatient] int NOT NULL,
-	PRIMARY KEY CLUSTERED ([id] ASC)
- )
-  
+CREATE TABLE [dbo].[RDV] (
+    [id]          INT          IDENTITY (1, 1) NOT NULL,
+    [dateRDV]     DATETIME     NOT NULL,
+    [heureRDV]    VARCHAR (50) NOT NULL,
+    [medecinId] INT          NOT NULL,
+    [patientId] INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+	
    CREATE TABLE dbo.Specialite
  (
 	[id] INT IDENTITY (1,1) NOT NULL,
